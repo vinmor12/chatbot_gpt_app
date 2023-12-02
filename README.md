@@ -4,18 +4,15 @@ OpenVINO application to text prediction with [GPT-2](https://github.com/vinmor12
 
 It has been developed with Python 3.10 and it has been tested on Windows 11 with OpenVINO 2022.3.
 
-Prerequisites
+Requirement
 -
 You can run this app with:
 + Python (version 3.7, 3.8, 3.9, 3.10)   
   see instruction [here](https://www.python.org/downloads/)
 + OpenVINO Toolkit (version 2022.3)  
   see instruction [here](https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/download.html?VERSION=v_2023_2_0&OP_SYSTEM=WINDOWS&DISTRIBUTION=ARCHIVE)
-
-In addition, you must install Gradio for Interactive Inference with the following command:
-```
-pip install gradio
-```
++ Git (obviously)       
+  see instruction [here](https://git-scm.com/)
 
 Usage
 -
@@ -27,6 +24,23 @@ You can use this application in the following way:
 + activate OpenVINO environment (the following command is for Windows OS)
   ```
   openvino_env\Scripts\activate
+  ```
++ install prerequisites if you don't have them  
+  you need to install the following modules (if you don't have them)
+  ```
+  pip install gradio
+  ```
+  ```
+  pip install ipwidgets
+  ```
+  ```
+  pip install transformers
+  ```
+  ```
+  pip install onnx
+  ```
+  ```
+  pip install torch
   ```
 + switch to "chatbot_gpt_app" folder
   ```
