@@ -37,3 +37,8 @@ You can use this application in the following way:
   python chatbot_gpt.py
   ```
 + navigate the menu to download/convert aivables gpt models ad to do infer on a supported device target
+
+![Main_Menu](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/main_menu.png)
+![Inference_Menu](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/inference_menu.png)
+![Inference_GPT_2](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_2.png)
+![Inference_GPT_Neo](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_neo.png)
