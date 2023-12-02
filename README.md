@@ -1,6 +1,6 @@
 # Chatbot GPT Application
 
-OpenVINO application to text prediction with **GPT-2** and **GPT-Neo** models.
+OpenVINO application to text prediction with [GPT-2](https://github.com/vinmor12/chatbot_gpt_app/tree/main/model/gpt_2) and [GPT-Neo](https://github.com/vinmor12/chatbot_gpt_app/tree/main/model/gpt_neo) models.
 
 It has been developed with Python 3.10 and it has been tested on Windows 11 with OpenVINO 2022.3.
 
