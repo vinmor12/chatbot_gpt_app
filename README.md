@@ -31,7 +31,7 @@ You can use this application in the following way:
   pip install gradio
   ```
   ```
-  pip install ipwidgets
+  pip install ipywidgets
   ```
   ```
   pip install transformers
