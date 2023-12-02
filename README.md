@@ -22,7 +22,7 @@ Usage
 You can use this application in the following way:
 + open a new Terminal and clone the repository
   ```
-  git clone https://github.com/vinmor12/classification_app.git
+  git clone https://github.com/vinmor12/chatbot_gpt_app.git
   ```
 + activate OpenVINO environment (the following command is for Windows OS)
   ```
