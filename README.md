@@ -2,7 +2,7 @@
 
 OpenVINO application to text prediction with **GPT-2** and **GPT-Neo** models.
 
-It has been powered with Python 3.10 and it has been tested on Windows 11 with OpenVINO 2022.3.
+It has been developed with Python 3.10 and it has been tested on Windows 11 with OpenVINO 2022.3.
 
 Prerequisites
 -
