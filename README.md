@@ -25,7 +25,7 @@ You can use this application in the following way:
   ```
   openvino_env\Scripts\activate
   ```
-+ install prerequisites if you don't have them  
++ install the prerequisites if you don't have them  
   you need to install the following modules (if you don't have them)
   ```
   pip install gradio
@@ -50,7 +50,7 @@ You can use this application in the following way:
   ```
   python chatbot_gpt.py
   ```
-+ navigate the menu to download/convert aivables gpt models ad to do infer on a supported device target
++ navigate the menu to download/convert available GPT models and to do infer on a supported target device.
 
 ![Main_Menu](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/main_menu.png)
 ![Inference_Menu](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/inference_menu.png)
