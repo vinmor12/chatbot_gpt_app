@@ -1,6 +1,6 @@
 # Chatbot GPT Application
 
-OpenVINO application to text prediction with [GPT-2](https://github.com/vinmor12/chatbot_gpt_app/tree/main/model/gpt_2) and [GPT-Neo](https://github.com/vinmor12/chatbot_gpt_app/tree/main/model/gpt_neo) models.
+OpenVINO application for text prediction with [GPT-2](https://github.com/vinmor12/chatbot_gpt_app/tree/main/model/gpt_2) and [GPT-Neo](https://github.com/vinmor12/chatbot_gpt_app/tree/main/model/gpt_neo) models.
 
 It has been developed with Python 3.10 and it has been tested on Windows 11 with OpenVINO 2022.3.
 
@@ -21,9 +21,14 @@ You can use this application in the following way:
   ```
   git clone https://github.com/vinmor12/chatbot_gpt_app.git
   ```
-+ activate OpenVINO environment (the following command is for Windows OS)
++ activate OpenVINO environment  
+  use the following command for Windows OS 
   ```
   openvino_env\Scripts\activate
+  ```
+  use the following command for Linux OS 
+  ```
+  source openvino_env/bin/activate
   ```
 + install the prerequisites if you don't have them  
   you need to install the following modules (if you don't have them)
