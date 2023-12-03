@@ -43,50 +43,50 @@ os.system('cls')
 # os.system('mode con: cols=40 lines=80')
 
 # DRAW SPRITE FUNCTION
-def draw_sprite(sprite):
-    #sprite = 1 #2
+def draw_sprite(sprite):            
     if sprite == 1:
         print(Fore.GREEN + "\n"," "*(20-round(11/2)),"CHATBOT APP")
         print(Fore.WHITE + "-"*40)
-        print(Fore.GREEN + "           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("       ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("    ▒▒▒▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒▒▒▒▒ ")
-        print("    ▒▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▒▒ ")
-        print("    ▒▒▓███████▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓█████▓▒▒ ")
-        print("    ▒▒▓█████████▓▓▒▒▒▒▒▒▒▓▓██████▓▓▒▒ ")
-        print("    ▒▒▒▓██████████▓▒▒▒▒▓████████▓▓▒▒ ")
-        print("    ▒▒▒▒▓▓▓████▓▓▓▓▒▒▒▒▒▓▓███▓▓▓▒▒▒▒ ")
-        print("     ▒▒▒▒▒▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("       ▒▒▒▒▒▒▒▒▒▒▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("        ▒▓▒▒▒▒▒▒▓▓█▒▒▒▒▒▒▒▒▒▒▒▒▒ ")
-        print("          ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░ ")    
-        print("           ▓▒▒▒▒▓█████▓▒▒▒▒▒▒░ ")
-        print("             ▒▒▓▒▒▒▒▒▒▒▓▒▒░░ ")     
-        print("                ▒▒▒▒▒▒▒ ")
-        print(Fore.WHITE + "-"*40)
-    else:
+        print(Fore.GREEN + "                .::::::.            ")
+        print("           .=#@@@@%%#**#@@#=.           ")
+        print("        :#@@@%%%*-:.    .::=#-          ")      
+        print("     -@@@%+-.                 .*@%=     ")
+        print("    +@@@@-                     ++%@*    ") 
+        print("   =@@@* .:=+++--.      .:-++=-:.-#%@+  ")
+        print("   -@@@+*@%%%#*#@@%+:-=#@@%#@%%%%.*%@=  ")
+        print("   -@@@+-=++###+*==: .==++#*+=-.:.%@@=  ")
+        print("   +@@@+ --.=+. -:        -+- :   #@@:  ")  
+        print("   :+@@-         ..              .@=.   ")
+        print("   ..%@=         +*- .=           #     ")
+        print("    .:#+          .:..           =:     ")
+        print("    .*@%=                        #+     ")   
+        print("       .#-   :=#%##+==---:.             ")
+        print("        .++:    .:--::.                 ")       
+        print("            -*+.           :.           ")
+        print("              :===+*++=-:.              ")
+        print(Fore.WHITE + "-"*40) 
+    if sprite == 2:
         print(Fore.GREEN + "\n"," "*(20-round(11/2)),"CHATBOT APP")
         print(Fore.WHITE + "-"*40)
-        print(Fore.GREEN +"          ███████▓▒░░░░░░░▒▒▒█▒ ")
-        print("       ▓████▓▒▒▒▒░░░░░░░░░░░░▒░▒ ")
-        print("     ▒████▓▒░░░░░░░░░░░░░░░░░░░▓██▒ ")
-        print("    ▓████▒░░░░░░░░░░░░░░░░░░░░░▓▓██▓ ")
-        print("   ▒███▓░░░▒▒▒▒▒░░░░░░░░▒▒▒▒▒▒░▒███▓ ")
-        print("   ▒███▓░░░▒▒▒▒▒░░░░░░░░▒▒▒▒▒▒░▒███▓ ")
-        print("   ▒███▓▓████▓▓████▓▒░▒██████████░▓██▒ ")
-        print("   ▒███▓▒▒▓▓▓█▓▓▓▒░░░░░▒▓▓▓▓▓▒░░░░███▒ ")
-        print("   ▓███▓░▒▒░▒▒░░▒▒░░░░░░░░▒▒▒░░░░░▓██ ")
-        print("   ▒███▒░░░░░░░░░░░▒░░░░░░░░░░░░░░██▒ ")
-        print("     ██▒░░░░░░░░░▓▓▒░░▓▒░░░░░░░░░░█ ")
-        print("     ▒█▓░░░░░░░░▒░░░▒░░░░▒░░░░░░░▒ ")
-        print("     ▒█▓░░░░░░░▒░░░░▒░░░░░▒░░░░░░▒ ")
-        print("        █▒░░░░▒▓██▓▓▒▒▒▒▒▒░░░░░░ ")
-        print("         ▓▓▒░░░▒░░░░░░░░░░▒░░░ ")
-        print("           ▓▓░░░░░░░░░░░░░░░░ ")
-        print("             ▒▒▒▓▓▓▓▒▒▒░░░░ ")
+        print(Fore.GREEN + "             .............          ")
+        print("        .....::::--=----:::::---.      ")
+        print("      ..:-==++++++====++********+=     ")
+        print("    ::-==+*%%@@%#*:. .+%@@@@@%##***    ")
+        print("    .-=+*%@@@@@@%+.  .+%@@@@@@%##*+=-  ")
+        print("     .:=*%@@@@@%+.   .=*#@@@@%#+=---:  ")
+        print("        .:=+*+=-.    .-+----:....::--  ")
+        print("   ..........:. :--:-=+*+:::.....:-=+  ")
+        print("   ........:.  .::-:=+##*=::::::::-=*  ")
+        print("   ....::..   .:=++++*##*====-====*##  ")
+        print("   ....::.  .-++-.-:--=*#%#**==+++*##  ")
+        print("   ..::::...-#=-=++++=*++%%*#++++*###  ")
+        print("    :::-:..:*@@@@@@@@@@@@@%+##++**##   ")
+        print("     ::::..:@@@@%@@@@@@@@@@=######+    ")     
+        print("       ::...-#%@%%@@@@@@%#-+##+*       ")       
+        print("          ..:..:-=-===++::*#*=         ")
+        print("             -=-:..::::-+*+            ")
         print(Fore.WHITE + "-"*40)
+                      
 
 # MAIN MENU FUNCTION
 
@@ -96,48 +96,38 @@ def main_menu():
     draw_sprite(1)
     print(" "*(20-round(9/2)),"MAIN MENU")
     print("-"*40)
-    print("Select the Options:\n 1 - Get Pytorch Models\n 2 - Covert Models in IR\n 3 - Run Inference\n 4 - Quit")
+    print("Select the Options:\n 1 - Get Models\n 2 - Run Inference\n 3 - Quit")
     print("-"*40)
     flag = int(input(">> "))
     return flag
 
 # DOWNLOAD MODELS FUNCTIONS
 
-# menu
-def get_models_menu():
-    os.system('cls')
-    draw_sprite(2)
-    print(" "*(20-round(18/2)),"GET PYTORCH MODELS")
-    print("-"*40)
-    print("Select the Model:\n 1 - GPT-Neo\n 2 - GPT-2\n 3 - Back")
-    print("-"*40)
-    flag = int(input(">> "))
-    return flag
-
 # download gpt-2 and gpt-neo pytorch models 
 # and tokenizer from huggingface
 def get_models_fun(flag):
     if flag == 1:
         os.system('cls')
-        draw_sprite(1)
+        draw_sprite(2)
         print("Download ...\n")
         model_name.value = 'GPT-Neo'
         pt_model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-125M')
         tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     elif flag == 2:
         os.system('cls')
-        draw_sprite(1)
+        draw_sprite(2)
         print("Download ...\n")
         model_name.value = 'GPT-2'
         pt_model = GPT2LMHeadModel.from_pretrained('gpt2')
         tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+    return pt_model, tokenizer
 
 # CONVERT MODELS FUNCTIONS
 
 # menu
 def convert_models_menu():
     os.system('cls')
-    draw_sprite(2)
+    draw_sprite(1)
     print(" "*(20-round(20/2)),"CONVERT MODELS IN IR")
     print("-"*40)
     print("Select the Model:\n 1 - GPT-Neo\n 2 - GPT-2\n 3 - Back")
@@ -152,8 +142,7 @@ def convert_models_fun(flag):
     if flag == 1:  
         onnx_path = Path("model/gpt_neo/text_generator.onnx")
         onnx_path.parent.mkdir(exist_ok=True)
-        pt_model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-125M')
-        tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
+        pt_model, tokenizer = get_models_fun(1)
         dim = int(input("Select the max sequence length\n(max 2048, recommended 128)\n>>"))
         if dim < 5:
             dim = 5
@@ -162,8 +151,7 @@ def convert_models_fun(flag):
     elif flag == 2:  
         onnx_path = Path("model/gpt_2/text_generator.onnx")
         onnx_path.parent.mkdir(exist_ok=True)
-        pt_model = GPT2LMHeadModel.from_pretrained('gpt2')
-        tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+        pt_model, tokenizer = get_models_fun(2)
         dim = int(input("Select the max sequence length\n(max 1024, recommended 128)\n>>"))
         if dim < 5:
             dim = 5
@@ -171,7 +159,7 @@ def convert_models_fun(flag):
             dim = 1024
     # save max sequence length
     os.system('cls')
-    draw_sprite(1)
+    draw_sprite(2)
     print("Conversion ...\n")
     with open(onnx_path.with_suffix(".txt"), 'w') as f:
         f.write(f"{dim}")
@@ -303,6 +291,7 @@ def inference_fun(flag):
                                      fill_value=filter_value).filled()
         return filtred_scores
 
+
     # main processing function
     # generating the predicted sequence
     def generate_sequence(input_ids : List[int], attention_mask : List[int], max_sequence_length : int = 128,
@@ -381,32 +370,29 @@ def inference_fun(flag):
             #print()
             print(Fore.GREEN + f"\n[{model_name.value}]: {output_text}")
 
-# MAIN LOOP
+
 i = 6
-while(i!=4):
-    i = main_menu()
-    # download pytorch models
+while(i!=3):
+    i = main_menu()     
+    # get models 
     if i == 1:
-        j = get_models_menu()
+        j = convert_models_menu()
         while(j<1 or j>3):
-            j = get_models_menu()
+            j = convert_models_menu()
         if j<3:
-            get_models_fun(j)      
-    # conversion models in IR 
-    if i == 2:
-        k = convert_models_menu()
-        while(k<1 or k>3):
-            k = convert_models_menu()
-        if k<3:
-            convert_models_fun(k)
+            convert_models_fun(j)
     # inference
-    if i == 3:
-        w = inference_menu()
-        while(w<1 or w>3):
-            w = inference_menu()
-        if w<3:
-            inference_fun(w)
+    if i == 2:
+        j = inference_menu()
+        while(j<1 or j>3):
+            j = inference_menu()
+        if j<3:
+            inference_fun(j)
 # exit
-print("Exit ...")
+os.system('cls')
+draw_sprite(2)
+print(" "*(20-round(9/2)),"EXIT")
+print("-"*40)
+print("See you soon ...")
 time.sleep(3)
 os.system('cls')
