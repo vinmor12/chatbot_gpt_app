@@ -207,7 +207,7 @@ def inference_fun(flag):
             time.sleep(3)
             enable = 0
         if enable == 1:
-            pt_model, tokenizer = init_models_fun(1)
+            tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     else:  
         model_path = Path("model/gpt_2/text_generator.xml")
         try:
@@ -220,7 +220,7 @@ def inference_fun(flag):
             time.sleep(3)
             enable = 0
         if enable == 1:
-            pt_model, tokenizer = init_models_fun(2)     
+            tokenizer = GPT2Tokenizer.from_pretrained('gpt2')     
     if enable == 1:
         # define max sequence length    
         dim = int(input(f"Select the max sequence length\n(max {max_dim})\n>>"))
@@ -380,7 +380,7 @@ def inference_fun(flag):
                 #print()
                 print(Fore.GREEN + f"\n[{model_name.value}]: {output_text}")
 
-
+# MAIN LOOP
 i = 6
 while(i!=3):
     i = main_menu()     
