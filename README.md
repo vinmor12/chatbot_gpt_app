@@ -51,8 +51,11 @@ You can use this application in the following way:
   python chatbot_gpt.py
   ```
 + navigate the menu to download/convert available GPT models and to do infer on a supported target device.
-
-![Main_Menu](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/main_menu.png)
-![Inference_Menu](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/inference_menu.png)
-![Inference_GPT_2](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_2.png)
-![Inference_GPT_Neo](https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_neo.png)
+<p align="center">
+  <img width="25%" src="https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/main_menu_rev.png">
+  <img width="25%" src="https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/inference_menu_rev.png">
+</p>
+<p align="center">
+  <img width="50%" src="https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_2.png">
+  <img width="50%" src="https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_neo.png">
+</p>
