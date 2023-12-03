@@ -21,14 +21,9 @@ You can use this application in the following way:
   ```
   git clone https://github.com/vinmor12/chatbot_gpt_app.git
   ```
-+ activate OpenVINO environment  
-  use the following command for Windows OS 
++ activate OpenVINO environment (the following command is for Windows OS)
   ```
   openvino_env\Scripts\activate
-  ```
-  use the following command for Linux OS 
-  ```
-  source openvino_env/bin/activate
   ```
 + install the prerequisites if you don't have them  
   you need to install the following modules (if you don't have them)
