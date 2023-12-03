@@ -47,8 +47,8 @@ def draw_sprite(sprite):
     if sprite == 1:
         print(Fore.GREEN + "\n"," "*(20-round(11/2)),"CHATBOT APP")
         print(Fore.WHITE + "-"*40)
-        print(Fore.GREEN + "                .::::::.            ")
-        print("           .=#@@@@%%#**#@@#=.           ")
+        #print(Fore.GREEN + "                .::::::.            ")
+        print(Fore.GREEN + "           .=#@@@@%%#**#@@#=.           ")
         print("        :#@@@%%%*-:.    .::=#-          ")      
         print("     -@@@%+-.                 .*@%=     ")
         print("    +@@@@-                     ++%@*    ") 
@@ -76,7 +76,7 @@ def draw_sprite(sprite):
         print("     .:=*%@@@@@%+.   .=*#@@@@%#+=---:  ")
         print("        .:=+*+=-.    .-+----:....::--  ")
         print("   ..........:. :--:-=+*+:::.....:-=+  ")
-        print("   ........:.  .::-:=+##*=::::::::-=*  ")
+        #print("   ........:.  .::-:=+##*=::::::::-=*  ")
         print("   ....::..   .:=++++*##*====-====*##  ")
         print("   ....::.  .-++-.-:--=*#%#**==+++*##  ")
         print("   ..::::...-#=-=++++=*++%%*#++++*###  ")
@@ -105,18 +105,18 @@ def main_menu():
 
 # download gpt-2 and gpt-neo pytorch models 
 # and tokenizer from huggingface
-def get_models_fun(flag):
+def init_models_fun(flag):
     if flag == 1:
         os.system('cls')
         draw_sprite(2)
-        print("Download ...\n")
+        print("Model Initialization ...\n")
         model_name.value = 'GPT-Neo'
         pt_model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-125M')
         tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     elif flag == 2:
         os.system('cls')
         draw_sprite(2)
-        print("Download ...\n")
+        print("Model Initialization ...\n")
         model_name.value = 'GPT-2'
         pt_model = GPT2LMHeadModel.from_pretrained('gpt2')
         tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
@@ -142,9 +142,7 @@ def convert_models_fun(flag):
     if flag == 1:  
         onnx_path = Path("model/gpt_neo/text_generator.onnx")
         onnx_path.parent.mkdir(exist_ok=True)
-        pt_model, tokenizer = get_models_fun(1)
-        #pt_model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-125M')
-        #tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
+        pt_model, tokenizer = init_models_fun(1)
         dim = int(input("Select the max sequence length\n(max 2048, recommended 128)\n>>"))
         if dim < 5:
             dim = 5
@@ -153,9 +151,7 @@ def convert_models_fun(flag):
     elif flag == 2:  
         onnx_path = Path("model/gpt_2/text_generator.onnx")
         onnx_path.parent.mkdir(exist_ok=True)
-        pt_model, tokenizer = get_models_fun(2)
-        #pt_model = GPT2LMHeadModel.from_pretrained('gpt2')
-        #tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+        pt_model, tokenizer = init_models_fun(2)
         dim = int(input("Select the max sequence length\n(max 1024, recommended 128)\n>>"))
         if dim < 5:
             dim = 5
@@ -196,31 +192,37 @@ def inference_menu():
 
 # inference with pt-2 and gpt-ne IR models
 def inference_fun(flag):
+    enable = 1
     # set path of IR models
     # and tokenizer from huggingface
     if flag == 1:  
-        model_name.value = "GPT-Neo"
         model_path = Path("model/gpt_neo/text_generator.xml")
-        pt_model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-125M')
-        tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
+        try:
+            with open(model_path.with_suffix(".txt"), 'r') as f:
+                max_dim = int(f.read())
+            f.close()
+        except:
+            print("Missing Files")
+            print("Get the model first ...")
+            time.sleep(3)
+            enable = 0
+        if enable == 1:
+            pt_model, tokenizer = init_models_fun(1)
     else:  
-        model_name.value = "GPT-2"
         model_path = Path("model/gpt_2/text_generator.xml")
-        pt_model = GPT2LMHeadModel.from_pretrained('gpt2')
-        tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-    # define max sequence length
-    enable = 1
-    try:
-        with open(model_path.with_suffix(".txt"), 'r') as f:
-            max_dim = int(f.read())
-        f.close()
-    except:
-        print("Missing Files")
-        print("Get the models first ...")
-        time.sleep(3)
-        #sys.exit(0)
-        enable = 0
+        try:
+            with open(model_path.with_suffix(".txt"), 'r') as f:
+                max_dim = int(f.read())
+            f.close()
+        except:
+            print("Missing Files")
+            print("Get the model first ...")
+            time.sleep(3)
+            enable = 0
+        if enable == 1:
+            pt_model, tokenizer = init_models_fun(2)     
     if enable == 1:
+        # define max sequence length    
         dim = int(input(f"Select the max sequence length\n(max {max_dim})\n>>"))
         if dim > max_dim:
             dim = max_dim
