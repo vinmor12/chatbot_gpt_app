@@ -19,7 +19,6 @@ from colorama import Fore, Back, Style
 print(Fore.GREEN +"Developed with Python 3.10\nTested on CPU with OpenVINO 2022.3\nfor Windows\n\nvinmor12 - y.2023-v.1.0")
 print(Fore.WHITE +"-"*40)
 from gradio import Blocks, Chatbot, Textbox, Row, Column
-import ipywidgets as widgets
 from transformers import GPTNeoForCausalLM, GPT2TokenizerFast, GPT2Tokenizer, GPT2LMHeadModel
 from pathlib import Path
 from openvino.runtime import serialize
@@ -30,14 +29,7 @@ from typing import List, Tuple
 import numpy as np
 import time
 import sys
-style = {'description_width': 'initial'}
-model_name = widgets.Select(
-            options=['GPT-2', 'GPT-Neo'],
-            value='GPT-2',
-            description='Select Model:',
-            disabled=False
-        )
-widgets.VBox([model_name])
+model_name = 'GPT-2'
 os.system('cls')
 # to resize window console uncomment following line:
 # os.system('mode con: cols=40 lines=80')
@@ -108,14 +100,14 @@ def init_models_fun(flag):
         os.system('cls')
         draw_sprite(2)
         print("Model Initialization ...\n")
-        model_name.value = 'GPT-Neo'
+        model_name = 'GPT-Neo'
         pt_model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-125M')
         tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     elif flag == 2:
         os.system('cls')
         draw_sprite(2)
         print("Model Initialization ...\n")
-        model_name.value = 'GPT-2'
+        model_name = 'GPT-2'
         pt_model = GPT2LMHeadModel.from_pretrained('gpt2')
         tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
     return pt_model, tokenizer
@@ -205,7 +197,7 @@ def inference_fun(flag):
             time.sleep(3)
             enable = 0
         if enable == 1:
-            model_name.value = 'GPT-Neo'
+            model_name = 'GPT-Neo'
             tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     else:  
         model_path = Path("model/gpt_2/text_generator.xml")
@@ -219,7 +211,7 @@ def inference_fun(flag):
             time.sleep(3)
             enable = 0
         if enable == 1:
-            model_name.value = 'GPT-2'
+            model_name = 'GPT-2'
             tokenizer = GPT2Tokenizer.from_pretrained('gpt2')     
     if enable == 1:
         # define max sequence length    
@@ -366,7 +358,7 @@ def inference_fun(flag):
             if text == "q":
                 break
             else:
-                print(Fore.YELLOW + f"\n{model_name.value} is writing ...", end = "\r")
+                print(Fore.YELLOW + f"\n{model_name} is writing ...", end = "\r")
                 input_ids, attention_mask = tokenize(text)
                 start = time.perf_counter()
                 output_ids = generate_sequence(input_ids, attention_mask, dim)
@@ -378,7 +370,7 @@ def inference_fun(flag):
                 print(f"Generation took {end - start:.3f} s")
                 #print(f"Input Text:  {text}")
                 #print()
-                print(Fore.GREEN + f"\n[{model_name.value}]: {output_text}")
+                print(Fore.GREEN + f"\n[{}]: {output_text}")
 
 # MAIN LOOP
 i = 6
