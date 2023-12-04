@@ -205,6 +205,7 @@ def inference_fun(flag):
             time.sleep(3)
             enable = 0
         if enable == 1:
+            model_name.value = 'GPT-Neo'
             tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     else:  
         model_path = Path("model/gpt_2/text_generator.xml")
@@ -218,6 +219,7 @@ def inference_fun(flag):
             time.sleep(3)
             enable = 0
         if enable == 1:
+            model_name.value = 'GPT-2'
             tokenizer = GPT2Tokenizer.from_pretrained('gpt2')     
     if enable == 1:
         # define max sequence length    
