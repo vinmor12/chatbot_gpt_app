@@ -126,7 +126,7 @@ def init_models_fun(flag):
 def convert_models_menu():
     os.system('cls')
     draw_sprite(1)
-    print(" "*(20-round(20/2)),"CONVERT MODELS IN IR")
+    print(" "*(20-round(20/2)),"GET MODELS")
     print("-"*40)
     print("Select the Model:\n 1 - GPT-Neo\n 2 - GPT-2\n 3 - Back")
     print("-"*40)
@@ -195,11 +195,11 @@ def inference_fun(flag):
     # and tokenizer from huggingface
     if flag == 1:  
         model_path = Path("model/gpt_neo/text_generator.xml")
-        try:
+        if os.path.exists(model_path.with_suffix(".txt")):
             with open(model_path.with_suffix(".txt"), 'r') as f:
                 max_dim = int(f.read())
             f.close()
-        except:
+        else:
             print("Missing Files")
             print("Get the model first ...")
             time.sleep(3)
@@ -209,11 +209,11 @@ def inference_fun(flag):
             tokenizer = GPT2TokenizerFast.from_pretrained('EleutherAI/gpt-neo-125M')
     else:  
         model_path = Path("model/gpt_2/text_generator.xml")
-        try:
+        if os.path.exists(model_path.with_suffix(".txt")):
             with open(model_path.with_suffix(".txt"), 'r') as f:
                 max_dim = int(f.read())
             f.close()
-        except:
+        else:
             print("Missing Files")
             print("Get the model first ...")
             time.sleep(3)
