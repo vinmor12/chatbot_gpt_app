@@ -370,7 +370,7 @@ def inference_fun(flag):
                 print(f"Generation took {end - start:.3f} s")
                 #print(f"Input Text:  {text}")
                 #print()
-                print(Fore.GREEN + f"\n[{}]: {output_text}")
+                print(Fore.GREEN + f"\n[{model_name}]: {output_text}")
 
 # MAIN LOOP
 i = 6
