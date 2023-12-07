@@ -1,7 +1,7 @@
 # CHAT BOT with GPT-2 & GPT-NEO
 # Vincenzo - y.2023-v.1.0
 # ----------------------------------------------------
-# Developed with Python 3.7
+# Developed with Python 3.10
 # Tested on CPU with OpenVINO 2022.3 for Windows
 # 
 # PREREQUISITES
