@@ -56,3 +56,6 @@ You can use this application in the following way:
   <img width="70%" src="https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_2.png">
   <img width="70%" src="https://raw.githubusercontent.com/vinmor12/chatbot_gpt_app/main/data/images/gpt_neo.png">
 </p>
+
+References:  
+https://docs.openvino.ai/2022.3/notebooks/223-text-prediction-with-output.html
